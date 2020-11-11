@@ -1,0 +1,33 @@
+@import "default.scss";
+
+// .main-menu {
+//     &--wrapper {
+
+//     }
+//     &--item {
+//         &.selected {
+//             color: $blue;
+//             background-color: rgba(50,116,210,.15);
+//             font-weight: 500;
+//         }
+//     }
+// }
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.main-menu {
+    &--wrapper {
+        font-size: 18px;
+
+    }
+    &--item {
+        .v-btn__content {
+            span {
+                font-size: 18px;
+            }
+        }
+        &.selected {
+            color: $blue;
+        }
+    }
+}
