@@ -1,54 +1,49 @@
 <template>
-  <v-container>
-    <v-content>
-      <v-btn to="/About">Kung Fu</v-btn>
-      <v-btn to="/home">Kung Fu</v-btn>
-      <!-- <router-link to="/foo" tag="button">foo</router-link>
-      <v-list-item v-for="(item, i) in items" :key="i" :to="item.link" link>
-        {{ item.text }}
-      </v-list-item> -->
-      <router-view/>
-    </v-content>
-  </v-container>
+    <v-form class="login">
+      <v-container class="" style="width: 350px;">
+        <img src="@/assets/image/ts_logo.png" alt="두손소프트 로고" class="login__logo-img">
+        <p class="login__main-text mb-8">개인화약관 홈페이지 관리자</p>
+        <!-- ID -->
+        <v-text-field
+          outlined
+          label="ID"
+          hide-details
+          background-color="white"
+          class="mb-3"
+          v-model="id"
+        ></v-text-field>
+        <!-- Password -->
+        <v-text-field
+          outlined
+          v-model="password"
+          :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+          :type="show ? 'text' : 'password'"
+          label="Password"
+          @click:append="show = !show"
+          hide-details
+          background-color="white"
+          class="mb-3"
+        ></v-text-field>
+        <!-- login btn -->
+        <v-btn 
+          color="accent"
+          large
+          dark
+          block
+          depressed
+          to="/PCMS/M01/ADM001"
+        >로그인</v-btn>
+      </v-container>
+    </v-form>
 </template>
 
 <script>
 export default {
-  name: "login",
 
   data: () => ({
-
-    //   items: [
-    //   {
-    //     icon: 'mdi-folder',
-    //     text: 'Home',
-    //     link: '/',
-    //   },
-    //   {
-    //     icon: 'mdi-account-multiple',
-    //     text: 'Starred',
-    //     link: 'https://github.com/vuetifyjs/vuetify',
-    //   },
-    //   {
-    //     icon: 'mdi-star',
-    //     text: 'About',
-    //     link: '/about',
-    //   },
-    // ]
-    // whatsNext: [
-    //   {
-    //     text: "Explore components",
-    //     href: "https://vuetifyjs.com/components/api-explorer"
-    //   },
-    //   {
-    //     text: "Select a layout",
-    //     href: "https://vuetifyjs.com/getting-started/pre-made-layouts"
-    //   },
-    //   {
-    //     text: "Frequently Asked Questions",
-    //     href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
-    //   }
-    // ]
+    show: false,
+    password: "Password",
+    id: "admin"
   })
 };
 </script>

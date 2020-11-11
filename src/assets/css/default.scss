@@ -1,11 +1,11 @@
 // main color
 $navy: #003171;
 $dark-blue: #0045A7;
-$blue: #3274D2;
-$light-blue: #5A94E6;
-$green: #53A1A3;
-$red: #D9623F;
-$orange: #E69423;
+$blue: #357CE0;
+$light-blue: #4F9FED;
+$green: #5AA8AA;
+$red: #DE6762;
+$orange: #ED8A4A;
 $blue-grey: #435264;
 // grey
 $light-grey: #EFEFEF;
@@ -15,3 +15,43 @@ $grey: #ADB2B9;
 $font-black: #222222; // font
 $font-light-grey: #a7a7a7;
 $font-grey: #515151;
+
+// font style
+.text-color {
+    &--primary {
+        color: $blue;
+    }
+    &--secondary {
+        color: $light-blue;
+    }
+    &--green {
+        color: $green;
+    }
+}
+// 강조
+.emphasis-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: $navy;
+}
+.sub-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: $font-grey;
+    &--light-color {
+        color: $font-light-grey;
+    }
+}
+.clear {
+    display: block;
+    &:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+}
+.ellipsis-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
