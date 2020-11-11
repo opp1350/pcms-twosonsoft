@@ -51,7 +51,7 @@
           height="50px"
           to="/PCMS/M01/ADM003"
         >
-          문서등록록
+          문서등록
         </v-btn>
         <v-btn
           color="accent"
